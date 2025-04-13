@@ -10,4 +10,13 @@ public class Contador {
         System.out.println("Digite o segundo número: ");
         int segundoNumero = Integer.parseInt(input.nextLine());
     }
+    static void contar(int primeiroParametro, int segundoParametro){
+        int contagem = segundoParametro - primeiroParametro;
+
+        if (contagem >= 0){
+            for(int i = 0; i <= contagem; i++){
+                System.out.println("Número: " + i);
+            }
+        }
+    }
 }
