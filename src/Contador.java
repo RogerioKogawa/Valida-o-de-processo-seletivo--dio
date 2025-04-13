@@ -15,6 +15,7 @@ public class Contador {
         }catch (Exception e){
             System.out.println("Erro: " + e.getMessage());
         }
+        scanner.close();
     }
     static void contar(int primeiroParametro, int segundoParametro) throws ParametrosInvalidosException{
         int contagem = segundoParametro - primeiroParametro;
