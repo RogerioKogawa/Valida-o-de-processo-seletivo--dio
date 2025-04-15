@@ -4,20 +4,17 @@ public class Contador {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        try {
-            System.out.println("Digite o primeiro número: ");
-            int primeiroNumero = Integer.parseInt(input.nextLine());
+        System.out.println("Digite o primeiro número: ");
+        int primeiroNumero = Integer.parseInt(input.nextLine());
 
-            System.out.println("Digite o segundo número: ");
-            int segundoNumero = Integer.parseInt(input.nextLine());
+        System.out.println("Digite o segundo número: ");
+        int segundoNumero = Integer.parseInt(input.nextLine());
 
-            contar(primeiroNumero, segundoNumero);
-        }catch (NumberFormatException e) {
-            System.out.println("Um dos parametros está inválido");
-        }catch (ParametrosInvalidosException e) {
+        try{
+            contar(primeiroNumero,segundoNumero);
+        }catch (Exception e){
             System.out.println("Erro: " + e.getMessage());
         }
-
     }
     static void contar(int primeiroParametro, int segundoParametro) throws ParametrosInvalidosException{
         int contagem = segundoParametro - primeiroParametro;
